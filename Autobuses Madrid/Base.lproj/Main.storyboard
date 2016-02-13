@@ -53,11 +53,40 @@
                     <connections>
                         <outlet property="menuButton" destination="RPe-Sx-cV2" id="3yh-hT-164"/>
                         <outlet property="textfieldParada" destination="h6w-J6-0Vu" id="c0C-8u-kEf"/>
+                        <segue destination="aZV-RA-aRe" kind="show" identifier="detailSegue" id="xOI-an-OtM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="737" y="-166"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="9Sa-I4-IqC">
+            <objects>
+                <tableViewController id="aZV-RA-aRe" customClass="DetailTableViewController" customModule="Autobuses_Madrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" id="TYQ-5a-Gve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="c8D-1p-sln" customClass="DetailTimeTableViewCell" customModule="Autobuses_Madrid" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="49"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8D-1p-sln" id="n0e-UF-oVj">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aZV-RA-aRe" id="qdN-hP-dRw"/>
+                            <outlet property="delegate" destination="aZV-RA-aRe" id="PE4-2B-3dd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aI8-ao-THP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="-166"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="8q7-XO-Pm9">
@@ -133,6 +162,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="HAv-4h-uyP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.23547479587351991" green="0.52324989270479427" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

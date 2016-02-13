@@ -12,9 +12,10 @@ class MainViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var textfieldParada: UITextField!
-    
     //init parser
     let timeParser:TimeParser = TimeParser.sharedInstance
+    
+    var arrayData:NSArray = NSArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,18 +37,15 @@ class MainViewController: UIViewController,UITextFieldDelegate {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        
     }
     
     //método que se llama desde TimeParser cuando termina el parseo
     func parserEnded(notification: NSNotification){
         
         let dicTemp:NSDictionary = notification.userInfo!
-        let arrayData:NSArray = dicTemp["info"] as! NSArray
-        
-        print(arrayData)
-        //TODO: SEGUE A LA VISTA DETALLE.
-        
+        let array:NSArray = dicTemp["info"] as! NSArray
+        arrayData = array
+        self.performSegueWithIdentifier("detailSegue", sender: self)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -77,14 +75,17 @@ class MainViewController: UIViewController,UITextFieldDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier! as NSString).isEqual("detailSegue"){
+            //pasamos el array de datos.
+            
+            let vc:DetailTableViewController = segue.destinationViewController as! DetailTableViewController
+            vc.arrayData = arrayData
+        }
     }
-    */
+
 
 }
