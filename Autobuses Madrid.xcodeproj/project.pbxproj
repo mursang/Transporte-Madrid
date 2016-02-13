@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		557D93331C6EAED500C3707B /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93321C6EAED500C3707B /* TimeParser.swift */; };
+		557D93351C6F375600C3707B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93341C6F375600C3707B /* Constants.swift */; };
+		557D93371C6F3C9500C3707B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93361C6F3C9500C3707B /* MainViewController.swift */; };
+		557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557D933D1C6F3F9000C3707B /* SWRevealViewController.m */; };
+		557D93421C6F40AE00C3707B /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 557D93401C6F40AE00C3707B /* reveal-icon.png */; };
+		557D93431C6F40AE00C3707B /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 557D93411C6F40AE00C3707B /* reveal-icon@2x.png */; };
 		55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */; };
-		55EF45F11C6DE86C0032E0F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF45F01C6DE86C0032E0F7 /* ViewController.swift */; };
 		55EF45F41C6DE86C0032E0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F21C6DE86C0032E0F7 /* Main.storyboard */; };
 		55EF45F61C6DE86C0032E0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */; };
 		55EF45F91C6DE86C0032E0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		557D93321C6EAED500C3707B /* TimeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
+		557D93341C6F375600C3707B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		557D93361C6F3C9500C3707B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autobuses Madrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		557D933C1C6F3F9000C3707B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		557D933D1C6F3F9000C3707B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		557D93401C6F40AE00C3707B /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		557D93411C6F40AE00C3707B /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
 		55EF45EB1C6DE86C0032E0F7 /* Autobuses Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autobuses Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55EF45F01C6DE86C0032E0F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55EF45F31C6DE86C0032E0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EF45F81C6DE86C0032E0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +47,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		557D93311C6EAEB600C3707B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				557D93321C6EAED500C3707B /* TimeParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		557D93381C6F3C9900C3707B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				557D93361C6F3C9500C3707B /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		557D93391C6F3F7800C3707B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				557D933A1C6F3F7D00C3707B /* SWRevealViewController */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		557D933A1C6F3F7D00C3707B /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				557D933C1C6F3F9000C3707B /* SWRevealViewController.h */,
+				557D933D1C6F3F9000C3707B /* SWRevealViewController.m */,
+				557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		557D933F1C6F40A000C3707B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				557D93441C6F512500C3707B /* Menu */,
+				557D93401C6F40AE00C3707B /* reveal-icon.png */,
+				557D93411C6F40AE00C3707B /* reveal-icon@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		557D93441C6F512500C3707B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		55EF45E21C6DE86C0032E0F7 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +117,16 @@
 		55EF45ED1C6DE86C0032E0F7 /* Autobuses Madrid */ = {
 			isa = PBXGroup;
 			children = (
+				557D933F1C6F40A000C3707B /* Images */,
+				557D93391C6F3F7800C3707B /* Tools */,
+				557D93381C6F3C9900C3707B /* Controller */,
+				557D93311C6EAEB600C3707B /* Model */,
 				55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */,
-				55EF45F01C6DE86C0032E0F7 /* ViewController.swift */,
 				55EF45F21C6DE86C0032E0F7 /* Main.storyboard */,
 				55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */,
 				55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */,
 				55EF45FA1C6DE86C0032E0F7 /* Info.plist */,
+				557D93341C6F375600C3707B /* Constants.swift */,
 			);
 			path = "Autobuses Madrid";
 			sourceTree = "<group>";
@@ -96,6 +163,7 @@
 				TargetAttributes = {
 					55EF45EA1C6DE86C0032E0F7 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YC472TTS6E;
 					};
 				};
 			};
@@ -123,8 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55EF45F91C6DE86C0032E0F7 /* LaunchScreen.storyboard in Resources */,
+				557D93431C6F40AE00C3707B /* reveal-icon@2x.png in Resources */,
 				55EF45F61C6DE86C0032E0F7 /* Assets.xcassets in Resources */,
 				55EF45F41C6DE86C0032E0F7 /* Main.storyboard in Resources */,
+				557D93421C6F40AE00C3707B /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55EF45F11C6DE86C0032E0F7 /* ViewController.swift in Sources */,
+				557D93331C6EAED500C3707B /* TimeParser.swift in Sources */,
 				55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */,
+				557D93351C6F375600C3707B /* Constants.swift in Sources */,
+				557D93371C6F3C9500C3707B /* MainViewController.swift in Sources */,
+				557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +320,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Autobuses-Madrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Autobuses Madrid/Autobuses Madrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -258,10 +336,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Autobuses-Madrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Autobuses Madrid/Autobuses Madrid-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +366,7 @@
 				55EF45FF1C6DE86C0032E0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
