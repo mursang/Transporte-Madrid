@@ -4,6 +4,7 @@
 //
 //
 //  Clase Singleton que parsea los tiempos de los autobuses dado un id de parada
+//  A través del delegate, se puede detectar la finalización del parseo y el array resultado
 //
 //
 //  Created by Angel Sans Muro on 13/2/16.
@@ -12,7 +13,14 @@
 
 import UIKit
 
+protocol BusesTimeParserDelegate: class{
+    func didFinishParsing(sender: TimeParser, data: NSArray)
+}
+
 class TimeParser: NSObject, NSXMLParserDelegate {
+    
+    var delegate: BusesTimeParserDelegate?
+    
     static let sharedInstance = TimeParser()
     
     let serviceClient = Constants.TimeParser.serviceClient
@@ -47,7 +55,6 @@ class TimeParser: NSObject, NSXMLParserDelegate {
         
         //limpiamos array
         arrayFinal = []
-        
         //realizamos la conexión y el parseo:
         let parser = NSXMLParser(contentsOfURL: NSURL(string: URLFinal)!)
         parser?.delegate = self
@@ -124,12 +131,10 @@ class TimeParser: NSObject, NSXMLParserDelegate {
         
     }
     
+    
+    //notificamos al delegate de que el parseo ha terminado y pasamos el array con resultados
     func parserDidEndDocument(parser: NSXMLParser) {
-        
-        //avisamos a la app que el parseo ha terminado.
-        //Paso arrayFinal encapsulado en un diccionario.
-        NSNotificationCenter.defaultCenter().postNotificationName("parserEnded", object: nil, userInfo: ["info":arrayFinal])
-
+        delegate?.didFinishParsing(self, data: arrayFinal)
     }
 
     

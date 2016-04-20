@@ -14,6 +14,12 @@ struct Constants {
         static let passKey = "EAC8DF74-C12C-4DAC-A60D-993C4BB14CDC"
     }
     
+    struct BlueColor{
+        static let red = CGFloat(60.0)
+        static let green = CGFloat(133.0)
+        static let blue = CGFloat(247.0)
+    }
+    
 
     
 }

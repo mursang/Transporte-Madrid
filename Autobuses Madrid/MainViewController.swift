@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class MainViewController: UIViewController,UITextFieldDelegate {
+class MainViewController: UIViewController,UITextFieldDelegate, BusesTimeParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var textfieldParada: UITextField!
@@ -17,18 +18,17 @@ class MainViewController: UIViewController,UITextFieldDelegate {
     
     var arrayData:NSArray = NSArray()
     
+    var loadingView: NVActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //notificacion para cuando el parser ha terminado
-        NSNotificationCenter.defaultCenter().addObserver(
-            self,
-            selector: "parserEnded:",
-            name: "parserEnded",
-            object: nil)
-        
+
+        timeParser.delegate = self
         textfieldParada.delegate = self
 
+        let loadingViewWidth = self.view.bounds.size.width/4
+        loadingView = NVActivityIndicatorView(frame: CGRectMake(self.view.bounds.size.width/2-loadingViewWidth/2, self.view.bounds.size.height/2-loadingViewWidth/2, loadingViewWidth, loadingViewWidth), type: .BallPulseSync, color: UIColor(red: Constants.BlueColor.red/255.0,green:Constants.BlueColor.green/255.0,blue: Constants.BlueColor.blue/255.0, alpha:1.0), padding: 0)
+        self.view.addSubview(loadingView!)
         
         //para abrir el menú lateral
         if self.revealViewController() != nil {
@@ -39,14 +39,6 @@ class MainViewController: UIViewController,UITextFieldDelegate {
         
     }
     
-    //método que se llama desde TimeParser cuando termina el parseo
-    func parserEnded(notification: NSNotification){
-        
-        let dicTemp:NSDictionary = notification.userInfo!
-        let array:NSArray = dicTemp["info"] as! NSArray
-        arrayData = array
-        self.performSegueWithIdentifier("detailSegue", sender: self)
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textfieldParada.resignFirstResponder()
@@ -59,14 +51,32 @@ class MainViewController: UIViewController,UITextFieldDelegate {
         
         let numeroParada: String = textfieldParada.text!
         
-        //llamamos al parser con el numero de parada
-        //TODO: PONER UN CARGANDO
-        timeParser.calculaTiempos(numeroParada)
+        //cargando..
+        loadingView?.startAnimation()
         
+        //llamamos al parser con un pequeño delay, para que de tiempo al loadingView a ponerse.
+        let delay = 0.1 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue()) {
+             self.timeParser.calculaTiempos(numeroParada)
+        }
         
         return true
     }
     
+    
+    /* Time Parser Delegate*/
+    //Una vez el parseo termina, hacemos el segue a la vista de detalle.
+    func didFinishParsing(sender: TimeParser, data: NSArray) {
+        loadingView?.stopAnimation()
+        arrayData = data;
+
+        if (data.count == 0){
+            //TODO: Mostrar error.
+            return;
+        }
+        self.performSegueWithIdentifier("detailSegue", sender: self)
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +94,7 @@ class MainViewController: UIViewController,UITextFieldDelegate {
             
             let vc:DetailTableViewController = segue.destinationViewController as! DetailTableViewController
             vc.arrayData = arrayData
+            vc.numParada = textfieldParada.text
         }
     }
 

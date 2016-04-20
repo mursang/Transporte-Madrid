@@ -10,6 +10,8 @@ import UIKit
 
 class DetailTimeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var destinoLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
