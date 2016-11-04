@@ -15,6 +15,7 @@ class EMTDetailTableViewController: UITableViewController {
     var orderedData: [String:[EMTSearchResult]]?
     var sortedKeys: [String]?
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class EMTDetailTableViewController: UITableViewController {
                 orderedData![element.idLine] = array!
             }
         }
+        
         
         sortedKeys = Array(orderedData!.keys).sorted(by: <)
         self.tableView.reloadData()
