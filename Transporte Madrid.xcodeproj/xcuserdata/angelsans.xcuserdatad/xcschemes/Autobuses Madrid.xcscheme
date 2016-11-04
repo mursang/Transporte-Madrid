@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55EF45EA1C6DE86C0032E0F7"
-               BuildableName = "Autobuses Madrid.app"
-               BlueprintName = "Autobuses Madrid"
-               ReferencedContainer = "container:Autobuses Madrid.xcodeproj">
+               BuildableName = "Transporte Madrid.app"
+               BlueprintName = "Transporte Madrid"
+               ReferencedContainer = "container:Transporte Madrid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55EF45EA1C6DE86C0032E0F7"
-            BuildableName = "Autobuses Madrid.app"
-            BlueprintName = "Autobuses Madrid"
-            ReferencedContainer = "container:Autobuses Madrid.xcodeproj">
+            BuildableName = "Transporte Madrid.app"
+            BlueprintName = "Transporte Madrid"
+            ReferencedContainer = "container:Transporte Madrid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55EF45EA1C6DE86C0032E0F7"
-            BuildableName = "Autobuses Madrid.app"
-            BlueprintName = "Autobuses Madrid"
-            ReferencedContainer = "container:Autobuses Madrid.xcodeproj">
+            BuildableName = "Transporte Madrid.app"
+            BlueprintName = "Transporte Madrid"
+            ReferencedContainer = "container:Transporte Madrid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55EF45EA1C6DE86C0032E0F7"
-            BuildableName = "Autobuses Madrid.app"
-            BlueprintName = "Autobuses Madrid"
-            ReferencedContainer = "container:Autobuses Madrid.xcodeproj">
+            BuildableName = "Transporte Madrid.app"
+            BlueprintName = "Transporte Madrid"
+            ReferencedContainer = "container:Transporte Madrid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

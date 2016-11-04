@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		557D93331C6EAED500C3707B /* EMTTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93321C6EAED500C3707B /* EMTTimeParser.swift */; };
+		557D93351C6F375600C3707B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93341C6F375600C3707B /* Constants.swift */; };
+		557D93371C6F3C9500C3707B /* EMTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93361C6F3C9500C3707B /* EMTViewController.swift */; };
+		557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557D933D1C6F3F9000C3707B /* SWRevealViewController.m */; };
+		557D93481C6F8F1000C3707B /* EMTDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */; };
+		557D934B1C6F9A8900C3707B /* DetailTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */; };
+		5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598D9F51DCC960A00568F00 /* LoadingView.swift */; };
+		55D4BC8A1DCC933D00745599 /* EMTSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4BC891DCC933D00745599 /* EMTSearchResult.swift */; };
+		55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */; };
+		55EF45F41C6DE86C0032E0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F21C6DE86C0032E0F7 /* Main.storyboard */; };
+		55EF45F61C6DE86C0032E0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */; };
+		55EF45F91C6DE86C0032E0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */; };
+		9623725938129BC05CEF7A63 /* Pods_Transporte_Madrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.release.xcconfig"; sourceTree = "<group>"; };
+		2A366EEDE8804239247A7C63 /* Pods_Autobuses_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Autobuses_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		388241DD43518F3241FEABC3 /* Pods-Autobuses Madrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autobuses Madrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Autobuses Madrid/Pods-Autobuses Madrid.release.xcconfig"; sourceTree = "<group>"; };
+		557D93321C6EAED500C3707B /* EMTTimeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTTimeParser.swift; sourceTree = "<group>"; };
+		557D93341C6F375600C3707B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		557D93361C6F3C9500C3707B /* EMTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTViewController.swift; sourceTree = "<group>"; };
+		557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autobuses Madrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		557D933C1C6F3F9000C3707B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		557D933D1C6F3F9000C3707B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTDetailTableViewController.swift; sourceTree = "<group>"; };
+		557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTimeTableViewCell.swift; sourceTree = "<group>"; };
+		5598D9F51DCC960A00568F00 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		55D4BC891DCC933D00745599 /* EMTSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTSearchResult.swift; sourceTree = "<group>"; };
+		55EF45EB1C6DE86C0032E0F7 /* Transporte Madrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transporte Madrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55EF45F31C6DE86C0032E0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55EF45F81C6DE86C0032E0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55EF45FA1C6DE86C0032E0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E110BAEEFEED91B6E8636DF /* Pods-Autobuses Madrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autobuses Madrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Autobuses Madrid/Pods-Autobuses Madrid.debug.xcconfig"; sourceTree = "<group>"; };
+		A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.debug.xcconfig"; sourceTree = "<group>"; };
+		CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transporte_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55EF45E81C6DE86C0032E0F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9623725938129BC05CEF7A63 /* Pods_Transporte_Madrid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C43A540E01511AAB645CAFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A366EEDE8804239247A7C63 /* Pods_Autobuses_Madrid.framework */,
+				CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2262AD1D08ED4FFDC850F474 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E110BAEEFEED91B6E8636DF /* Pods-Autobuses Madrid.debug.xcconfig */,
+				388241DD43518F3241FEABC3 /* Pods-Autobuses Madrid.release.xcconfig */,
+				A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */,
+				0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		557D93311C6EAEB600C3707B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55D4BC881DCC932A00745599 /* Parsers */,
+				55D4BC891DCC933D00745599 /* EMTSearchResult.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		557D93381C6F3C9900C3707B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5598D9F21DCC959000568F00 /* EMT */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		557D93391C6F3F7800C3707B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				557D933A1C6F3F7D00C3707B /* SWRevealViewController */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		557D933A1C6F3F7D00C3707B /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				557D933C1C6F3F9000C3707B /* SWRevealViewController.h */,
+				557D933D1C6F3F9000C3707B /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		557D93491C6F9A6300C3707B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5598D9F41DCC95F700568F00 /* Loading */,
+				5598D9F31DCC95F000568F00 /* EMT */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5598D9F21DCC959000568F00 /* EMT */ = {
+			isa = PBXGroup;
+			children = (
+				557D93361C6F3C9500C3707B /* EMTViewController.swift */,
+				557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */,
+			);
+			name = EMT;
+			sourceTree = "<group>";
+		};
+		5598D9F31DCC95F000568F00 /* EMT */ = {
+			isa = PBXGroup;
+			children = (
+				557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */,
+			);
+			name = EMT;
+			sourceTree = "<group>";
+		};
+		5598D9F41DCC95F700568F00 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				5598D9F51DCC960A00568F00 /* LoadingView.swift */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
+		55D4BC881DCC932A00745599 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				557D93321C6EAED500C3707B /* EMTTimeParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		55EF45E21C6DE86C0032E0F7 = {
+			isa = PBXGroup;
+			children = (
+				55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */,
+				55EF45EC1C6DE86C0032E0F7 /* Products */,
+				2262AD1D08ED4FFDC850F474 /* Pods */,
+				0C43A540E01511AAB645CAFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55EF45EC1C6DE86C0032E0F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55EF45EB1C6DE86C0032E0F7 /* Transporte Madrid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */ = {
+			isa = PBXGroup;
+			children = (
+				557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */,
+				557D93391C6F3F7800C3707B /* Tools */,
+				557D93311C6EAEB600C3707B /* Model */,
+				557D93491C6F9A6300C3707B /* View */,
+				557D93381C6F3C9900C3707B /* Controller */,
+				55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */,
+				55EF45F21C6DE86C0032E0F7 /* Main.storyboard */,
+				55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */,
+				55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */,
+				55EF45FA1C6DE86C0032E0F7 /* Info.plist */,
+				557D93341C6F375600C3707B /* Constants.swift */,
+			);
+			name = "Transporte Madrid";
+			path = "Autobuses Madrid";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55EF45EA1C6DE86C0032E0F7 /* Transporte Madrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55EF45FD1C6DE86C0032E0F7 /* Build configuration list for PBXNativeTarget "Transporte Madrid" */;
+			buildPhases = (
+				04FB3933E9F2E13B007089F1 /* [CP] Check Pods Manifest.lock */,
+				55EF45E71C6DE86C0032E0F7 /* Sources */,
+				55EF45E81C6DE86C0032E0F7 /* Frameworks */,
+				55EF45E91C6DE86C0032E0F7 /* Resources */,
+				0CA8A08B503987E6C5DFB0C7 /* [CP] Embed Pods Frameworks */,
+				33081CD33F9B23EC1C56F297 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transporte Madrid";
+			productName = "Autobuses Madrid";
+			productReference = 55EF45EB1C6DE86C0032E0F7 /* Transporte Madrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55EF45E31C6DE86C0032E0F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Angel Sans";
+				TargetAttributes = {
+					55EF45EA1C6DE86C0032E0F7 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YC472TTS6E;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 55EF45E61C6DE86C0032E0F7 /* Build configuration list for PBXProject "Transporte Madrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55EF45E21C6DE86C0032E0F7;
+			productRefGroup = 55EF45EC1C6DE86C0032E0F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55EF45EA1C6DE86C0032E0F7 /* Transporte Madrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55EF45E91C6DE86C0032E0F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EF45F91C6DE86C0032E0F7 /* LaunchScreen.storyboard in Resources */,
+				55EF45F61C6DE86C0032E0F7 /* Assets.xcassets in Resources */,
+				55EF45F41C6DE86C0032E0F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04FB3933E9F2E13B007089F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0CA8A08B503987E6C5DFB0C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33081CD33F9B23EC1C56F297 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55EF45E71C6DE86C0032E0F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				557D93481C6F8F1000C3707B /* EMTDetailTableViewController.swift in Sources */,
+				557D93331C6EAED500C3707B /* EMTTimeParser.swift in Sources */,
+				55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */,
+				55D4BC8A1DCC933D00745599 /* EMTSearchResult.swift in Sources */,
+				557D93351C6F375600C3707B /* Constants.swift in Sources */,
+				557D93371C6F3C9500C3707B /* EMTViewController.swift in Sources */,
+				557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */,
+				557D934B1C6F9A8900C3707B /* DetailTimeTableViewCell.swift in Sources */,
+				5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55EF45F21C6DE86C0032E0F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55EF45F31C6DE86C0032E0F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55EF45F81C6DE86C0032E0F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55EF45FB1C6DE86C0032E0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55EF45FC1C6DE86C0032E0F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55EF45FE1C6DE86C0032E0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Transporte-Madrid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Autobuses Madrid/Autobuses Madrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		55EF45FF1C6DE86C0032E0F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Transporte-Madrid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Autobuses Madrid/Autobuses Madrid-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55EF45E61C6DE86C0032E0F7 /* Build configuration list for PBXProject "Transporte Madrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55EF45FB1C6DE86C0032E0F7 /* Debug */,
+				55EF45FC1C6DE86C0032E0F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55EF45FD1C6DE86C0032E0F7 /* Build configuration list for PBXNativeTarget "Transporte Madrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55EF45FE1C6DE86C0032E0F7 /* Debug */,
+				55EF45FF1C6DE86C0032E0F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55EF45E31C6DE86C0032E0F7 /* Project object */;
+}
