@@ -21,6 +21,10 @@ struct Constants {
         static let blue = CGFloat(247.0)
     }
     
+    struct EMTKeys{
+        static let favoriteKey = "kFavoriteKey"
+    }
+    
 
     
 }

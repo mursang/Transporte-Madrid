@@ -15,13 +15,28 @@ class EMTDetailTableViewController: UITableViewController {
     var orderedData: [String:[EMTSearchResult]]?
     var sortedKeys: [String]?
     
+    let prefs = UserDefaults.standard
+    
+    @IBOutlet weak var favoriteButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = numParada
+        checkFavorite()
         
         setUpTableViewData(arrayData!)
+    }
+    
+    func checkFavorite(){
+        if let arrayFavs = prefs.array(forKey: Constants.EMTKeys.favoriteKey){
+            let stringArray = arrayFavs as! [String]
+            if (stringArray.contains(numParada!)){
+                self.favoriteButton.isSelected = true
+                return
+            }
+        }
+        self.favoriteButton.isSelected = false
     }
     
     func setUpTableViewData(_ array:[EMTSearchResult]){
@@ -43,6 +58,27 @@ class EMTDetailTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
+    @IBAction func favoriteAction(_ sender: AnyObject) {
+        if let arrayFavs = prefs.array(forKey: Constants.EMTKeys.favoriteKey){
+            var stringArray = arrayFavs as! [String]
+            if (favoriteButton.isSelected){ //we want to delete this fav.
+                let index = stringArray.index(where: {$0 == numParada})
+                stringArray.remove(at: index!)
+                prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+                favoriteButton.isSelected = false
+            }else{ // we want to add it.
+                stringArray.append(numParada!)
+                prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+                favoriteButton.isSelected = true
+            }
+        }else{
+            var stringArray = [String]()
+            stringArray.append(numParada!)
+            prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+            favoriteButton.isSelected = true
+        }
+        prefs.synchronize()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

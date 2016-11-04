@@ -110,6 +110,22 @@
                             <outlet property="delegate" destination="aZV-RA-aRe" id="PE4-2B-3dd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="L4G-YD-iSK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="0YI-IR-wtz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wg4-VJ-Eic">
+                                <rect key="frame" x="338" y="11" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="star"/>
+                                <state key="selected" image="star-2"/>
+                                <connections>
+                                    <action selector="favoriteAction:" destination="aZV-RA-aRe" eventType="touchUpInside" id="VyE-yq-kqL"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="favoriteButton" destination="Wg4-VJ-Eic" id="wYA-pK-UiO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI8-ao-THP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,5 +222,7 @@
     </scenes>
     <resources>
         <image name="reveal-icon.png" width="22" height="17"/>
+        <image name="star" width="21" height="21"/>
+        <image name="star-2" width="21" height="21"/>
     </resources>
 </document>

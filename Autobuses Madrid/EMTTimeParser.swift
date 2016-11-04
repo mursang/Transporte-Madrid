@@ -42,6 +42,7 @@ class EMTTimeParser: NSObject, XMLParserDelegate {
     }
     
     func getArriveTimes(_ stopNumber: String){
+        elements.removeAll()
         //GET /geo/servicegeo.asmx/getArriveStop?idClient=string&passKey=string&idStop=string&statistics=string&cultureInfo=string
         let finalURL = serviceURL+serviceDetail+"idClient="+serviceClient+"&passKey="+passKey+"&idStop="+stopNumber+"&statistics=&cultureInfo="
         

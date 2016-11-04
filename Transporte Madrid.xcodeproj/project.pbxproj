@@ -19,13 +19,11 @@
 		55EF45F41C6DE86C0032E0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F21C6DE86C0032E0F7 /* Main.storyboard */; };
 		55EF45F61C6DE86C0032E0F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */; };
 		55EF45F91C6DE86C0032E0F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */; };
-		9623725938129BC05CEF7A63 /* Pods_Transporte_Madrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */; };
+		73961ACBFF7FE0AB67988878 /* Pods_Transporte_Madrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168E77481E2965BB68769FB1 /* Pods_Transporte_Madrid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.release.xcconfig"; sourceTree = "<group>"; };
-		2A366EEDE8804239247A7C63 /* Pods_Autobuses_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Autobuses_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		388241DD43518F3241FEABC3 /* Pods-Autobuses Madrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autobuses Madrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Autobuses Madrid/Pods-Autobuses Madrid.release.xcconfig"; sourceTree = "<group>"; };
+		168E77481E2965BB68769FB1 /* Pods_Transporte_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transporte_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		557D93321C6EAED500C3707B /* EMTTimeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTTimeParser.swift; sourceTree = "<group>"; };
 		557D93341C6F375600C3707B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		557D93361C6F3C9500C3707B /* EMTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTViewController.swift; sourceTree = "<group>"; };
@@ -42,9 +40,8 @@
 		55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55EF45F81C6DE86C0032E0F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55EF45FA1C6DE86C0032E0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E110BAEEFEED91B6E8636DF /* Pods-Autobuses Madrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Autobuses Madrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Autobuses Madrid/Pods-Autobuses Madrid.debug.xcconfig"; sourceTree = "<group>"; };
-		A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.debug.xcconfig"; sourceTree = "<group>"; };
-		CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transporte_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8038C09A56E2D28A6255E9 /* Pods-Transporte Madrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.debug.xcconfig"; sourceTree = "<group>"; };
+		B4ABDD8D870BFB5CD9D148DF /* Pods-Transporte Madrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transporte Madrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,29 +49,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9623725938129BC05CEF7A63 /* Pods_Transporte_Madrid.framework in Frameworks */,
+				73961ACBFF7FE0AB67988878 /* Pods_Transporte_Madrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C43A540E01511AAB645CAFB /* Frameworks */ = {
+		2E800148FF606157F61ACCAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A366EEDE8804239247A7C63 /* Pods_Autobuses_Madrid.framework */,
-				CDAAE766E34CF89D526DF603 /* Pods_Transporte_Madrid.framework */,
+				168E77481E2965BB68769FB1 /* Pods_Transporte_Madrid.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2262AD1D08ED4FFDC850F474 /* Pods */ = {
+		52EF19D3CBCC76A6C61D3EE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7E110BAEEFEED91B6E8636DF /* Pods-Autobuses Madrid.debug.xcconfig */,
-				388241DD43518F3241FEABC3 /* Pods-Autobuses Madrid.release.xcconfig */,
-				A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */,
-				0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */,
+				9E8038C09A56E2D28A6255E9 /* Pods-Transporte Madrid.debug.xcconfig */,
+				B4ABDD8D870BFB5CD9D148DF /* Pods-Transporte Madrid.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -160,8 +154,8 @@
 			children = (
 				55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */,
 				55EF45EC1C6DE86C0032E0F7 /* Products */,
-				2262AD1D08ED4FFDC850F474 /* Pods */,
-				0C43A540E01511AAB645CAFB /* Frameworks */,
+				52EF19D3CBCC76A6C61D3EE0 /* Pods */,
+				2E800148FF606157F61ACCAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,12 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55EF45FD1C6DE86C0032E0F7 /* Build configuration list for PBXNativeTarget "Transporte Madrid" */;
 			buildPhases = (
-				04FB3933E9F2E13B007089F1 /* [CP] Check Pods Manifest.lock */,
+				4FD42C3B7D45A29F2ED3F6F5 /* [CP] Check Pods Manifest.lock */,
 				55EF45E71C6DE86C0032E0F7 /* Sources */,
 				55EF45E81C6DE86C0032E0F7 /* Frameworks */,
 				55EF45E91C6DE86C0032E0F7 /* Resources */,
-				0CA8A08B503987E6C5DFB0C7 /* [CP] Embed Pods Frameworks */,
-				33081CD33F9B23EC1C56F297 /* [CP] Copy Pods Resources */,
+				AEC9AAC6762B10D46C64BDBE /* [CP] Embed Pods Frameworks */,
+				35E8095F913F4535E87C7BE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,7 +258,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04FB3933E9F2E13B007089F1 /* [CP] Check Pods Manifest.lock */ = {
+		35E8095F913F4535E87C7BE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FD42C3B7D45A29F2ED3F6F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,7 +288,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0CA8A08B503987E6C5DFB0C7 /* [CP] Embed Pods Frameworks */ = {
+		AEC9AAC6762B10D46C64BDBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,21 +301,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		33081CD33F9B23EC1C56F297 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transporte Madrid/Pods-Transporte Madrid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -433,7 +427,7 @@
 		};
 		55EF45FE1C6DE86C0032E0F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A243471B85327AD4B8E47C8C /* Pods-Transporte Madrid.debug.xcconfig */;
+			baseConfigurationReference = 9E8038C09A56E2D28A6255E9 /* Pods-Transporte Madrid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -451,7 +445,7 @@
 		};
 		55EF45FF1C6DE86C0032E0F7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CBCC8CC91BE9E80366CA228 /* Pods-Transporte Madrid.release.xcconfig */;
+			baseConfigurationReference = B4ABDD8D870BFB5CD9D148DF /* Pods-Transporte Madrid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
