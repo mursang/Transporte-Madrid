@@ -68,12 +68,18 @@ class EMTTimeParser: NSObject, XMLParserDelegate {
         // - TimeLeftBus
         
         //Optional (to do): PositionXBus, PositionYBus, IdBus, DistanceBus
-        if currentElement.isEqual("idLine"){
+        switch currentElement {
+        case "idLine":
             idLine.append(clearString(string))
-        }else if currentElement.isEqual("Destination"){
+            break
+        case "Destination":
             destination.append(clearString(string))
-        }else if currentElement.isEqual("TimeLeftBus"){
+            break
+        case "TimeLeftBus":
             timeLeftBus.append(clearString(string))
+            break
+        default:
+            break
         }
     }
     
@@ -86,16 +92,10 @@ class EMTTimeParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if ((elementName as NSString).isEqual(to: "Arrive")){
-            if idLine.isEqual(nil){
-                idLine = ""
-            }
-            if destination.isEqual(nil){
-                destination = ""
-            }
-            if timeLeftBus.isEqual(nil){
-                timeLeftBus = ""
-            }
-            
+            if (idLine.isEqual(nil)){idLine = ""}
+            if (destination.isEqual(nil)){destination = ""}
+            if (timeLeftBus.isEqual(nil)){timeLeftBus = ""}
+
             let myResult = EMTSearchResult(destination: destination, idLine: idLine, timeLeftBus: timeLeftBus)
             elements.append(myResult)
         }
@@ -105,9 +105,7 @@ class EMTTimeParser: NSObject, XMLParserDelegate {
     func parserDidEndDocument(_ parser: XMLParser) {
         delegate?.didFinishParsing(self, data: elements)
     }
-
-    
-    
+ 
     
 }
 

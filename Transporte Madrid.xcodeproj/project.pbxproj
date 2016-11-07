@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5539DFC11DD086570000762E /* EMTQRParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC01DD086570000762E /* EMTQRParser.swift */; };
+		5539DFC31DD0916F0000762E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC21DD0916F0000762E /* ErrorView.swift */; };
+		5539DFC51DD0965C0000762E /* EMTFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */; };
+		5539DFC81DD0982C0000762E /* EMTFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC71DD0982C0000762E /* EMTFavorite.swift */; };
 		557D93331C6EAED500C3707B /* EMTTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93321C6EAED500C3707B /* EMTTimeParser.swift */; };
 		557D93351C6F375600C3707B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93341C6F375600C3707B /* Constants.swift */; };
 		557D93371C6F3C9500C3707B /* EMTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93361C6F3C9500C3707B /* EMTViewController.swift */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		168E77481E2965BB68769FB1 /* Pods_Transporte_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transporte_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5539DFC01DD086570000762E /* EMTQRParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTQRParser.swift; sourceTree = "<group>"; };
+		5539DFC21DD0916F0000762E /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTFavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		5539DFC71DD0982C0000762E /* EMTFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTFavorite.swift; sourceTree = "<group>"; };
 		557D93321C6EAED500C3707B /* EMTTimeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTTimeParser.swift; sourceTree = "<group>"; };
 		557D93341C6F375600C3707B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		557D93361C6F3C9500C3707B /* EMTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTViewController.swift; sourceTree = "<group>"; };
@@ -73,11 +81,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		557D93311C6EAEB600C3707B /* Model */ = {
+		5539DFC61DD096BE0000762E /* EMT */ = {
 			isa = PBXGroup;
 			children = (
 				55D4BC881DCC932A00745599 /* Parsers */,
 				55D4BC891DCC933D00745599 /* EMTSearchResult.swift */,
+				5539DFC71DD0982C0000762E /* EMTFavorite.swift */,
+			);
+			name = EMT;
+			sourceTree = "<group>";
+		};
+		557D93311C6EAEB600C3707B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5539DFC61DD096BE0000762E /* EMT */,
+				5539DFC21DD0916F0000762E /* ErrorView.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */,
+				5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */,
 			);
 			name = EMT;
 			sourceTree = "<group>";
@@ -145,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				557D93321C6EAED500C3707B /* EMTTimeParser.swift */,
+				5539DFC01DD086570000762E /* EMTQRParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -312,13 +332,17 @@
 			files = (
 				557D93481C6F8F1000C3707B /* EMTDetailTableViewController.swift in Sources */,
 				557D93331C6EAED500C3707B /* EMTTimeParser.swift in Sources */,
+				5539DFC11DD086570000762E /* EMTQRParser.swift in Sources */,
 				55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */,
 				55D4BC8A1DCC933D00745599 /* EMTSearchResult.swift in Sources */,
 				557D93351C6F375600C3707B /* Constants.swift in Sources */,
+				5539DFC51DD0965C0000762E /* EMTFavoriteTableViewCell.swift in Sources */,
 				557D93371C6F3C9500C3707B /* EMTViewController.swift in Sources */,
 				557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */,
 				557D934B1C6F9A8900C3707B /* DetailTimeTableViewCell.swift in Sources */,
 				5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */,
+				5539DFC31DD0916F0000762E /* ErrorView.swift in Sources */,
+				5539DFC81DD0982C0000762E /* EMTFavorite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

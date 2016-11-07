@@ -8,32 +8,50 @@
 
 import UIKit
 
-class EMTDetailTableViewController: UITableViewController {
+class EMTDetailTableViewController: UITableViewController, EMTParserDelegate {
     
     var arrayData: [EMTSearchResult]?
     var numParada: String?
     var orderedData: [String:[EMTSearchResult]]?
     var sortedKeys: [String]?
+    var timeParser = EMTTimeParser.sharedInstance
     
     let prefs = UserDefaults.standard
     
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = numParada
         checkFavorite()
-        
         setUpTableViewData(arrayData!)
+    
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        timeParser.delegate = self
+    }
+    
+    @IBAction func refreshAction(_ sender: Any) {
+        LoadingView.sharedInstance.show(onTableViewController: self)
+        timeParser.getArriveTimes(self.numParada!)
+    }
+    
+    func didFinishParsing(_ sender: EMTTimeParser, data: [EMTSearchResult]) {
+        LoadingView.sharedInstance.hideFromTableView()
+        self.arrayData = data
+        self.setUpTableViewData(data)
     }
     
     func checkFavorite(){
-        if let arrayFavs = prefs.array(forKey: Constants.EMTKeys.favoriteKey){
-            let stringArray = arrayFavs as! [String]
-            if (stringArray.contains(numParada!)){
-                self.favoriteButton.isSelected = true
-                return
+        if let data = prefs.object(forKey: Constants.EMTKeys.favoriteKey) as? Data{
+            let array = NSKeyedUnarchiver.unarchiveObject(with: data) as! [EMTFavorite]
+            for fav in array{
+                if (fav.stopNumber! == self.numParada!){
+                    self.favoriteButton.isSelected = true
+                    return
+                }
             }
         }
         self.favoriteButton.isSelected = false
@@ -49,6 +67,7 @@ class EMTDetailTableViewController: UITableViewController {
             }else{
                 var array = orderedData![element.idLine]
                 array!.append(element)
+                array!.sort(by: {$0.timeInSeconds < $1.timeInSeconds})
                 orderedData![element.idLine] = array!
             }
         }
@@ -59,22 +78,27 @@ class EMTDetailTableViewController: UITableViewController {
     }
 
     @IBAction func favoriteAction(_ sender: AnyObject) {
-        if let arrayFavs = prefs.array(forKey: Constants.EMTKeys.favoriteKey){
-            var stringArray = arrayFavs as! [String]
+        if let arrayFavs = prefs.object(forKey: Constants.EMTKeys.favoriteKey) as? Data{
+            var favsArray = NSKeyedUnarchiver.unarchiveObject(with: arrayFavs) as! [EMTFavorite]
             if (favoriteButton.isSelected){ //we want to delete this fav.
-                let index = stringArray.index(where: {$0 == numParada})
-                stringArray.remove(at: index!)
-                prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+                let index = favsArray.index(where: {$0.stopNumber == numParada})
+                favsArray.remove(at: index!)
+                let data = NSKeyedArchiver.archivedData(withRootObject: favsArray)
+                prefs.set(data, forKey: Constants.EMTKeys.favoriteKey)
                 favoriteButton.isSelected = false
             }else{ // we want to add it.
-                stringArray.append(numParada!)
-                prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+                let myFav = EMTFavorite(stopNumber: numParada!, linesArray: Array(orderedData!.keys))
+                favsArray.append(myFav)
+                let data = NSKeyedArchiver.archivedData(withRootObject: favsArray)
+                prefs.set(data, forKey: Constants.EMTKeys.favoriteKey)
                 favoriteButton.isSelected = true
             }
         }else{
-            var stringArray = [String]()
-            stringArray.append(numParada!)
-            prefs.set(stringArray, forKey: Constants.EMTKeys.favoriteKey)
+            var favsArray = [EMTFavorite]()
+            let myFav = EMTFavorite(stopNumber: numParada!, linesArray: Array(orderedData!.keys))
+            favsArray.append(myFav)
+            let data = NSKeyedArchiver.archivedData(withRootObject: favsArray)
+            prefs.set(data, forKey: Constants.EMTKeys.favoriteKey)
             favoriteButton.isSelected = true
         }
         prefs.synchronize()
