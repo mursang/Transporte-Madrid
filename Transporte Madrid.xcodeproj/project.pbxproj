@@ -87,10 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				55D4BC881DCC932A00745599 /* Parsers */,
-				55D4BC891DCC933D00745599 /* EMTSearchResult.swift */,
 				5539DFC71DD0982C0000762E /* EMTFavorite.swift */,
+				55D4BC891DCC933D00745599 /* EMTSearchResult.swift */,
 			);
-			name = EMT;
+			path = EMT;
 			sourceTree = "<group>";
 		};
 		557D93311C6EAEB600C3707B /* Model */ = {
@@ -99,7 +99,7 @@
 				5539DFC61DD096BE0000762E /* EMT */,
 				5539DFC21DD0916F0000762E /* ErrorView.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		557D93381C6F3C9900C3707B /* Controller */ = {
@@ -107,7 +107,7 @@
 			children = (
 				5598D9F21DCC959000568F00 /* EMT */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		557D93391C6F3F7800C3707B /* Tools */ = {
@@ -115,7 +115,7 @@
 			children = (
 				557D933A1C6F3F7D00C3707B /* SWRevealViewController */,
 			);
-			name = Tools;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		557D933A1C6F3F7D00C3707B /* SWRevealViewController */ = {
@@ -124,25 +124,25 @@
 				557D933C1C6F3F9000C3707B /* SWRevealViewController.h */,
 				557D933D1C6F3F9000C3707B /* SWRevealViewController.m */,
 			);
-			name = SWRevealViewController;
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		557D93491C6F9A6300C3707B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5598D9F41DCC95F700568F00 /* Loading */,
 				5598D9F31DCC95F000568F00 /* EMT */,
+				5598D9F41DCC95F700568F00 /* Loading */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5598D9F21DCC959000568F00 /* EMT */ = {
 			isa = PBXGroup;
 			children = (
-				557D93361C6F3C9500C3707B /* EMTViewController.swift */,
 				557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */,
+				557D93361C6F3C9500C3707B /* EMTViewController.swift */,
 			);
-			name = EMT;
+			path = EMT;
 			sourceTree = "<group>";
 		};
 		5598D9F31DCC95F000568F00 /* EMT */ = {
@@ -152,7 +152,7 @@
 				5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */,
 				552D1EE21DD235640007AD20 /* EMTQRCustomView.swift */,
 			);
-			name = EMT;
+			path = EMT;
 			sourceTree = "<group>";
 		};
 		5598D9F41DCC95F700568F00 /* Loading */ = {
@@ -160,25 +160,25 @@
 			children = (
 				5598D9F51DCC960A00568F00 /* LoadingView.swift */,
 			);
-			name = Loading;
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		55D4BC881DCC932A00745599 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				557D93321C6EAED500C3707B /* EMTTimeParser.swift */,
 				5539DFC01DD086570000762E /* EMTQRParser.swift */,
+				557D93321C6EAED500C3707B /* EMTTimeParser.swift */,
 			);
-			name = Parsers;
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 		55EF45E21C6DE86C0032E0F7 = {
 			isa = PBXGroup;
 			children = (
-				55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */,
-				55EF45EC1C6DE86C0032E0F7 /* Products */,
-				52EF19D3CBCC76A6C61D3EE0 /* Pods */,
 				2E800148FF606157F61ACCAA /* Frameworks */,
+				52EF19D3CBCC76A6C61D3EE0 /* Pods */,
+				55EF45EC1C6DE86C0032E0F7 /* Products */,
+				55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,20 +193,19 @@
 		55EF45ED1C6DE86C0032E0F7 /* Transporte Madrid */ = {
 			isa = PBXGroup;
 			children = (
-				557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */,
-				557D93391C6F3F7800C3707B /* Tools */,
-				557D93311C6EAEB600C3707B /* Model */,
-				557D93491C6F9A6300C3707B /* View */,
 				557D93381C6F3C9900C3707B /* Controller */,
+				557D93311C6EAEB600C3707B /* Model */,
+				557D93391C6F3F7800C3707B /* Tools */,
+				557D93491C6F9A6300C3707B /* View */,
 				55EF45EE1C6DE86C0032E0F7 /* AppDelegate.swift */,
-				55EF45F21C6DE86C0032E0F7 /* Main.storyboard */,
 				55EF45F51C6DE86C0032E0F7 /* Assets.xcassets */,
-				55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */,
-				55EF45FA1C6DE86C0032E0F7 /* Info.plist */,
+				557D933B1C6F3F8F00C3707B /* Autobuses Madrid-Bridging-Header.h */,
 				557D93341C6F375600C3707B /* Constants.swift */,
+				55EF45FA1C6DE86C0032E0F7 /* Info.plist */,
+				55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */,
+				55EF45F21C6DE86C0032E0F7 /* Main.storyboard */,
 			);
-			name = "Transporte Madrid";
-			path = "Autobuses Madrid";
+			path = "Transporte Madrid";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +358,7 @@
 				55EF45F31C6DE86C0032E0F7 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		55EF45F71C6DE86C0032E0F7 /* LaunchScreen.storyboard */ = {
@@ -367,6 +367,7 @@
 				55EF45F81C6DE86C0032E0F7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -460,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				INFOPLIST_FILE = "Transporte Madrid/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Transporte-Madrid";
@@ -478,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Autobuses Madrid/Info.plist";
+				INFOPLIST_FILE = "Transporte Madrid/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wirebe.Transporte-Madrid";

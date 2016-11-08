@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Fuzi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Transporte Madrid.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>QRCodeReader.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA85DFDF58EC7DCC00BD2047FFBE1C64</key>
+		<key>1BC837F35AAFD5FB2A6C5A2BD955F6B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E19FB5CFCB8600C109A178F9D1E75A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66C00F07C0D25074B83ED5F31415C4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
