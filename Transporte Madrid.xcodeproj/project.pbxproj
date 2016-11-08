@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552D1EE31DD235640007AD20 /* EMTQRCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D1EE21DD235640007AD20 /* EMTQRCustomView.swift */; };
 		5539DFC11DD086570000762E /* EMTQRParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC01DD086570000762E /* EMTQRParser.swift */; };
 		5539DFC31DD0916F0000762E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC21DD0916F0000762E /* ErrorView.swift */; };
 		5539DFC51DD0965C0000762E /* EMTFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		168E77481E2965BB68769FB1 /* Pods_Transporte_Madrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transporte_Madrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		552D1EE21DD235640007AD20 /* EMTQRCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTQRCustomView.swift; sourceTree = "<group>"; };
 		5539DFC01DD086570000762E /* EMTQRParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTQRParser.swift; sourceTree = "<group>"; };
 		5539DFC21DD0916F0000762E /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTFavoriteTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */,
 				5539DFC41DD0965C0000762E /* EMTFavoriteTableViewCell.swift */,
+				552D1EE21DD235640007AD20 /* EMTQRCustomView.swift */,
 			);
 			name = EMT;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */,
 				5539DFC31DD0916F0000762E /* ErrorView.swift in Sources */,
 				5539DFC81DD0982C0000762E /* EMTFavorite.swift in Sources */,
+				552D1EE31DD235640007AD20 /* EMTQRCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

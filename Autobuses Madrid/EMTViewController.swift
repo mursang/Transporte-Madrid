@@ -28,17 +28,28 @@ class EMTViewController: UIViewController, UITextFieldDelegate, EMTParserDelegat
     
     //QR Reader
     //lazy var to avoid cpu overload during the init
+    /*lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
+        $0.cancelButtonTitle = "Cancelar"
+        $0.showSwitchCameraButton = false
+        $0.showTorchButton = true
+        $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode], captureDevicePosition: .back)
+    })*/
     lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
+        let readerView = QRCodeReaderContainer(displayable: EMTQRCustomView())
+        $0.readerView = readerView
+        $0.cancelButtonTitle = "Cancelar"
+        $0.showSwitchCameraButton = false
+        $0.showTorchButton = true
         $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode], captureDevicePosition: .back)
     })
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textfieldParada.delegate = self
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
-        
-        
+
         //lateral menu
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -92,8 +103,9 @@ class EMTViewController: UIViewController, UITextFieldDelegate, EMTParserDelegat
     }
     
     func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {
-        //not needed!
     }
+    
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
