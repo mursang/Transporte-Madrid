@@ -25,6 +25,10 @@ struct Constants {
         static let favoriteKey = "kFavoriteKey"
     }
     
+    struct MetroKeys{
+        static let favoriteKey = "kFavoriteKeyMetro"
+    }
+    
 
     
 }

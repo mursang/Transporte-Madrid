@@ -26,14 +26,7 @@ class EMTViewController: UIViewController, UITextFieldDelegate, EMTParserDelegat
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
-    //QR Reader
-    //lazy var to avoid cpu overload during the init
-    /*lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
-        $0.cancelButtonTitle = "Cancelar"
-        $0.showSwitchCameraButton = false
-        $0.showTorchButton = true
-        $0.reader = QRCodeReader(metadataObjectTypes: [AVMetadataObjectTypeQRCode], captureDevicePosition: .back)
-    })*/
+
     lazy var readerVC = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         let readerView = QRCodeReaderContainer(displayable: EMTQRCustomView())
         $0.readerView = readerView
