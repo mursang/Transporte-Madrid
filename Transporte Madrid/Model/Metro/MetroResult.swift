@@ -37,4 +37,6 @@ class MetroResult: NSObject, NSCoding {
         self.destination = destination
     }
     
+    
+    
 }

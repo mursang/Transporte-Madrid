@@ -20,6 +20,12 @@
 		557D93481C6F8F1000C3707B /* EMTDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */; };
 		557D934B1C6F9A8900C3707B /* DetailTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */; };
 		5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598D9F51DCC960A00568F00 /* LoadingView.swift */; };
+		559AEE161DDC55BF005E8F99 /* CercaniasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE151DDC55BF005E8F99 /* CercaniasViewController.swift */; };
+		559AEE1A1DDC55FA005E8F99 /* CercaniasResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE191DDC55FA005E8F99 /* CercaniasResult.swift */; };
+		559AEE1C1DDC5642005E8F99 /* CercaniasParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE1B1DDC5642005E8F99 /* CercaniasParser.swift */; };
+		559AEE1F1DDC570B005E8F99 /* CercaniasFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE1E1DDC570B005E8F99 /* CercaniasFavoriteTableViewCell.swift */; };
+		559AEE211DDC5809005E8F99 /* CercaniasStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE201DDC5809005E8F99 /* CercaniasStop.swift */; };
+		559AEE231DDC5AC6005E8F99 /* CercaniasDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559AEE221DDC5AC6005E8F99 /* CercaniasDetailViewController.swift */; };
 		55B6338D1DD7EAEA00F92B2F /* MetroParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6338C1DD7EAEA00F92B2F /* MetroParser.swift */; };
 		55B6338F1DD7EB5100F92B2F /* MetroResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6338E1DD7EB5100F92B2F /* MetroResult.swift */; };
 		55B633931DD9C8EC00F92B2F /* arrays.xml in Resources */ = {isa = PBXBuildFile; fileRef = 55B633921DD9C8EC00F92B2F /* arrays.xml */; };
@@ -53,6 +59,12 @@
 		557D93471C6F8F1000C3707B /* EMTDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTDetailTableViewController.swift; sourceTree = "<group>"; };
 		557D934A1C6F9A8900C3707B /* DetailTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTimeTableViewCell.swift; sourceTree = "<group>"; };
 		5598D9F51DCC960A00568F00 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		559AEE151DDC55BF005E8F99 /* CercaniasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasViewController.swift; sourceTree = "<group>"; };
+		559AEE191DDC55FA005E8F99 /* CercaniasResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasResult.swift; sourceTree = "<group>"; };
+		559AEE1B1DDC5642005E8F99 /* CercaniasParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasParser.swift; sourceTree = "<group>"; };
+		559AEE1E1DDC570B005E8F99 /* CercaniasFavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasFavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		559AEE201DDC5809005E8F99 /* CercaniasStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasStop.swift; sourceTree = "<group>"; };
+		559AEE221DDC5AC6005E8F99 /* CercaniasDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaniasDetailViewController.swift; sourceTree = "<group>"; };
 		55B6338C1DD7EAEA00F92B2F /* MetroParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroParser.swift; sourceTree = "<group>"; };
 		55B6338E1DD7EB5100F92B2F /* MetroResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroResult.swift; sourceTree = "<group>"; };
 		55B633921DD9C8EC00F92B2F /* arrays.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arrays.xml; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 		557D93311C6EAEB600C3707B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				559AEE171DDC55D3005E8F99 /* Cercanias */,
 				5539DFC61DD096BE0000762E /* EMT */,
 				552D1EE81DD48FA00007AD20 /* Metro */,
 				5539DFC21DD0916F0000762E /* ErrorView.swift */,
@@ -151,6 +164,7 @@
 		557D93381C6F3C9900C3707B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				559AEE141DDC55AE005E8F99 /* Cercanias */,
 				5598D9F21DCC959000568F00 /* EMT */,
 				552D1EE41DD48DC20007AD20 /* Metro */,
 			);
@@ -177,6 +191,7 @@
 		557D93491C6F9A6300C3707B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				559AEE1D1DDC56DF005E8F99 /* Cercanias */,
 				5598D9F31DCC95F000568F00 /* EMT */,
 				5598D9F41DCC95F700568F00 /* Loading */,
 				55B633981DDA194400F92B2F /* Metro */,
@@ -209,6 +224,41 @@
 				5598D9F51DCC960A00568F00 /* LoadingView.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		559AEE141DDC55AE005E8F99 /* Cercanias */ = {
+			isa = PBXGroup;
+			children = (
+				559AEE221DDC5AC6005E8F99 /* CercaniasDetailViewController.swift */,
+				559AEE151DDC55BF005E8F99 /* CercaniasViewController.swift */,
+			);
+			path = Cercanias;
+			sourceTree = "<group>";
+		};
+		559AEE171DDC55D3005E8F99 /* Cercanias */ = {
+			isa = PBXGroup;
+			children = (
+				559AEE181DDC55DA005E8F99 /* Parser */,
+				559AEE191DDC55FA005E8F99 /* CercaniasResult.swift */,
+				559AEE201DDC5809005E8F99 /* CercaniasStop.swift */,
+			);
+			path = Cercanias;
+			sourceTree = "<group>";
+		};
+		559AEE181DDC55DA005E8F99 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				559AEE1B1DDC5642005E8F99 /* CercaniasParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		559AEE1D1DDC56DF005E8F99 /* Cercanias */ = {
+			isa = PBXGroup;
+			children = (
+				559AEE1E1DDC570B005E8F99 /* CercaniasFavoriteTableViewCell.swift */,
+			);
+			path = Cercanias;
 			sourceTree = "<group>";
 		};
 		55B633981DDA194400F92B2F /* Metro */ = {
@@ -392,14 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559AEE1C1DDC5642005E8F99 /* CercaniasParser.swift in Sources */,
 				55B6338D1DD7EAEA00F92B2F /* MetroParser.swift in Sources */,
 				557D93481C6F8F1000C3707B /* EMTDetailTableViewController.swift in Sources */,
+				559AEE1F1DDC570B005E8F99 /* CercaniasFavoriteTableViewCell.swift in Sources */,
 				552D1EE61DD48DD20007AD20 /* MetroViewController.swift in Sources */,
 				55B633951DD9E72F00F92B2F /* MetroStop.swift in Sources */,
 				55B6339E1DDBBB3B00F92B2F /* MetroFavoriteTableViewCell.swift in Sources */,
 				55B6339C1DDA1ACD00F92B2F /* MetroIndicationsTableViewCell.swift in Sources */,
 				557D93331C6EAED500C3707B /* EMTTimeParser.swift in Sources */,
+				559AEE231DDC5AC6005E8F99 /* CercaniasDetailViewController.swift in Sources */,
 				5539DFC11DD086570000762E /* EMTQRParser.swift in Sources */,
+				559AEE161DDC55BF005E8F99 /* CercaniasViewController.swift in Sources */,
 				55EF45EF1C6DE86C0032E0F7 /* AppDelegate.swift in Sources */,
 				55D4BC8A1DCC933D00745599 /* EMTSearchResult.swift in Sources */,
 				557D93351C6F375600C3707B /* Constants.swift in Sources */,
@@ -407,6 +461,8 @@
 				55B6339A1DDA197000F92B2F /* MetroTimeLeftTableViewCell.swift in Sources */,
 				557D93371C6F3C9500C3707B /* EMTViewController.swift in Sources */,
 				557D933E1C6F3F9000C3707B /* SWRevealViewController.m in Sources */,
+				559AEE211DDC5809005E8F99 /* CercaniasStop.swift in Sources */,
+				559AEE1A1DDC55FA005E8F99 /* CercaniasResult.swift in Sources */,
 				557D934B1C6F9A8900C3707B /* DetailTimeTableViewCell.swift in Sources */,
 				5598D9F61DCC960A00568F00 /* LoadingView.swift in Sources */,
 				55B633971DDA18F600F92B2F /* MetroDetailTableViewController.swift in Sources */,
