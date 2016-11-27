@@ -8,8 +8,9 @@
 
 import UIKit
 import Fuzi
+import WebKit
 
-class MetroViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, MetroParserDelegate {
+class MetroViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, MetroParserDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -31,6 +32,8 @@ class MetroViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var favoritesTableView: UITableView!
     var arrayFavorites = [MetroResult]()
+    var webView: WKWebView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +55,27 @@ class MetroViewController: UIViewController, UITableViewDelegate, UITableViewDat
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        let url = "https://www.metromadrid.es/es/index.html"
+        //Fix for the new version of Metro's website.
+        //It requires Javascript to load, so we need a webView in order to get HTML from it.
+        let prefs = WKPreferences()
+        prefs.javaScriptEnabled = true
+        
+        let conf = WKWebViewConfiguration()
+        conf.preferences = prefs
+        let configuration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.navigationDelegate = self
+        self.view.addSubview(webView)
+        webView.load(URLRequest(url: URL(string: url)!))
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.documentElement.innerHTML", completionHandler: {result, error in
+            self.metroParser.getSpecialChar(withHTML: result as! String)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +120,7 @@ class MetroViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
         self.metroParser.delegate = self
         DispatchQueue.main.asyncAfter(deadline: time) {
-            self.metroParser.getMetroData(idOrigin: self.selectedOriginStop!.id, idDestination: self.selectedDestinationStop!.id, originName: self.originTextfield.text!, destinationName: self.destinationTextfield.text!)
+            self.metroParser.getMetroData(idOrigin: self.selectedOriginStop!.id, idDestination: self.selectedDestinationStop!.id, originName: self.originTextfield.text!, destinationName: self.destinationTextfield.text!, webView: self.webView)
         }
     }
     

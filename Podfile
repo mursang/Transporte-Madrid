@@ -7,6 +7,5 @@ target 'Transporte Madrid' do
 pod 'NVActivityIndicatorView'
 pod 'QRCodeReader.swift'
 pod 'Fuzi'
-
 end
 

@@ -8,12 +8,13 @@
 
 import Foundation
 import Fuzi
+import WebKit
 
 protocol MetroParserDelegate: class{
     func didFinishParsing(_ sender: MetroParser, data: MetroResult?, error: String?)
 }
 
-class MetroParser: NSObject, URLSessionDelegate {
+class MetroParser: NSObject, URLSessionDelegate, WKNavigationDelegate {
     
     static let sharedInstance = MetroParser()
      var delegate: MetroParserDelegate?
@@ -23,7 +24,37 @@ class MetroParser: NSObject, URLSessionDelegate {
     var originName: String!
     var destinationName: String!
     
-    func getMetroData(idOrigin: String, idDestination: String, originName: String, destinationName: String){
+    var specialChar: String?
+    var specialValue: String?
+
+    
+    override init(){
+        super.init()
+    }
+    
+    //we need this special char, that changes over time, in order to make connections to metro's webpage.
+    func getSpecialChar(withHTML: String){
+                do{
+                    let doc = try HTMLDocument(string: withHTML, encoding: .utf8)
+                    // XPath query to get indications and time
+                    for script in doc.xpath("//html/body/div[@id='contenedora']/div[@id='contenido']/div[@id='col1']/div[@class='bloq_fotos']/div[@class='dos2']/div[@class='acotacion2']/div[@class='origen_dest']/form/fieldset[@class='destino']/div[@class='clear'][5]/input[@type='hidden'][2]") {
+                        self.specialChar = script.attr("name")!
+                        self.specialValue = script.attr("value")!
+                    }
+                }catch let error{
+                    print(error.localizedDescription)
+        }
+    }
+    
+    func getMetroData(idOrigin: String, idDestination: String, originName: String, destinationName: String, webView: WKWebView){
+        if (self.specialValue == nil || self.specialChar == nil){
+            self.delegate?.didFinishParsing(self, data: nil, error: "UPS! Inténtalo de nuevo. Ha habido un problema conéctandonos con el servidor.")
+            return
+        }
+        
+        webView.navigationDelegate = self
+        
+        
         self.originName = originName
         self.destinationName = destinationName
         /*
@@ -44,13 +75,10 @@ class MetroParser: NSObject, URLSessionDelegate {
             "calle2":"+Introduce+una+calle...",
             "numeroDestino":"n%C2%BA",
             "lugar2":"+Introduce+un+lugar...",
-            "vhreshold":"15285171",
-            "_vmsro_":"511465053",
-            "vmesro":"16401"
+            "\(self.specialChar!)":"\(self.specialValue!)"
         ]
         
         var myFinalURL = baseURL
-        
         var first:Bool = true
         for key in dataDict{
             if (first){
@@ -60,34 +88,34 @@ class MetroParser: NSObject, URLSessionDelegate {
             }
             first = false
         }
-        self.makeConnection(url: myFinalURL)
-    }
-    
-    func makeConnection(url: String){
-        let urlconfig = URLSessionConfiguration.default
-        urlconfig.timeoutIntervalForRequest = 10
-        urlconfig.timeoutIntervalForResource = 20
-
-        let request = NSMutableURLRequest(url: URL(string: url)!)
+        
+        // we need Javascript here too, so we need to load the request on the webview.
+        let request = NSMutableURLRequest(url: URL(string: myFinalURL)!)
         request.setValue("https://www.metromadrid.es/es/index.html", forHTTPHeaderField: "Referer")
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
-        let session = URLSession(configuration: urlconfig, delegate: self, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
-            if (data != nil && error == nil){
+        webView.load(request as URLRequest)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.documentElement.innerHTML", completionHandler: {result, error in
+            self.parse(returnedHTML: result as! String)
+        })
+    }
+    
+    func parse(returnedHTML: String){
                 do{
-                    let doc = try HTMLDocument(data: data!)
-                    
+                    let doc = try HTMLDocument(string: returnedHTML, encoding: .utf8)
+                    //let doc = try HTMLDocument(data: data!)
                     var indicationsArray = [String]()
                     
-                     // XPath query to get indications and time
-                     for script in doc.xpath("//html/body/div[@id='contenedora']/div[@id='contenido']/div[@class='trayecto_det'][2]/div[@class='dcha impresionDescripcionTrayecto']/ul[2]/li/strong") {
-                        
+                    // XPath query to get indications and time
+                    for script in doc.xpath("//html/body/div[@id='contenedora']/div[@id='contenido']/div[@class='trayecto_det'][2]/div[@class='dcha impresionDescripcionTrayecto']/ul[2]/li/strong") {
                         var string = script.stringValue
                         string = string.replacingOccurrences(of: "<strong>", with: "")
                         string = string.replacingOccurrences(of: "</strong>", with: "")
                         indicationsArray.append(string)
-                     }
+                    }
                     if (indicationsArray.count == 0){
                         self.delegate?.didFinishParsing(self, data: nil, error: "UPS! Algo ha fallado.. Vuelve a intentarlo.")
                         return
@@ -99,18 +127,5 @@ class MetroParser: NSObject, URLSessionDelegate {
                 }catch let error{
                     print(error)
                 }
-            }else{
-                self.delegate?.didFinishParsing(self, data: nil, error: "UPS! Algo ha fallado.. Vuelve a intentarlo.")
-                return
-            }
-        })
-        task.resume()
     }
-    
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        completionHandler(.performDefaultHandling, nil)
-    }
-    
-    
-
 }
